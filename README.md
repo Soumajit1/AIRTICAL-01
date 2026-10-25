@@ -201,34 +201,7 @@ As organizations adopt cloud-native applications, containers, serverless computi
 
 ## Conclusion
 
-Cloud cybersecurity is a fundamental requirement in today's digital world. Although cloud computing offers significant benefits, it also introduces security challenges that organizations must manage carefully.
-
-By implementing strong authentication, encryption, least-privilege access, continuous monitoring, regular updates, and reliable backups, organizations can significantly reduce security risks. Ultimately, effective cloud cybersecurity requires a combination of technology, well-defined policies, and responsible user behavior to create a safer and more trustworthy digital environment.er behavior to create a safer and more trustworthy digital environment.
-
-
-
-/**
- * Definition for singly-linked list.
- * struct ListNode {
- *     int val;
- *     ListNode *next;
- *     ListNode() : val(0), next(nullptr) {}
- *     ListNode(int x) : val(x), next(nullptr) {}
- *     ListNode(int x, ListNode *next) : val(x), next(next) {}
- * };
- */
-class Solution {
-public:
-    ListNode* deleteDuplicates(ListNode* head) {
-        ListNode* dummy = new ListNode(0, head);
-        ListNode* pre = dummy;
-        ListNode* cur = head;
-        while (cur) {
-            while (cur->next && cur->next->val == cur->val) {
-                cur = cur->next;
-            }
-            if (pre->next == cur) {
-                /**
+Cloud cybersecurity is/**
  * Definition for singly-linked list.
  * struct ListNode {
  *     int val;
@@ -251,29 +224,13 @@ public:
             if (pre->next == cur) {
                 pre = cur;
             } else {
-                pre->next = cur->n/**
- * Definition for singly-linked list.
- * struct ListNode {
- *     int val;
- *     ListNode *next;
- *     ListNode() : val(0), next(nullptr) {}
- *     ListNode(int x) : val(x), next(nullptr) {}
- *     ListNode(int x, ListNode *next) : val(x), next(next) {}
- * };
- */
-class Solution {
-public:
-    ListNode* deleteDuplicates(ListNode* head) {
-        ListNode* dummy = new ListNode(0, head);
-        ListNode* pre = dummy;
-        ListNode* cur = head;
-        while (cur) {
-            while (cur->next && cur->next->val == cur->val) {
-                cur = cur->next;
+                pre->next = cur->next;
             }
-            if (pre->next == cur) {
-                pre = cur;
-            } else {
+            cur = cur->next;
+        }
+        return dummy->next;
+    }
+};
                 pre->next = cur->next;
             }
             cur = cur->next;
