@@ -14,14 +14,33 @@ Benefits of APIs in Cloud Computing
 Automation: Simplifies repetitive tasks and cloud resource management.
 Scalability: Supports applications as their requirements increase.
 Integration: Connects different applications and services.
-Efficiency: Reduces development time through reusable functionality.
-Flexibility: Enables the development of modern web, mobile, and cloud applications.
-Real-World Applications
-Cloud APIs are widely used in online payment systems, cloud storage platforms, e-commerce applications, AI-powered chatbots, data analytics, and automated software deployment. Platforms such as AWS, Microsoft Azure, and Google Cloud provide APIs that allow developers to integrate cloud capabilities into their applications.
-API Security Best Practices
-Securing cloud APIs is essential to protect sensitive information. Developers should use HTTPS, implement authentication and authorization, protect API keys, apply rate limiting, monitor API activity, and follow the principle of least privilege.
-Conclusion
-APIs are a fundamental part of cloud computing because they connect applications with cloud services, simplify automation, and improve scalability. Understanding cloud APIs helps developers build secure, efficient, and reliable applications for today's digital world.
+Efficiency: Reduces devel/**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     TreeNode *left;
+ *     TreeNode *right;
+ *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
+ * };
+ */
+class Solution {
+public:
+    vector<int> inorderTraversal(TreeNode* root) {
+        vector<int> ans;
+        function<void(TreeNode*)> dfs = [&](TreeNode* root) {
+            if (!root) {
+                return;
+            }
+            dfs(root->left);
+            ans.push_back(root->val);
+            dfs(root->right);
+        };
+        dfs(root);
+        return ans;
+    }
+};d computing because they connect applications with cloud services, simplify automation, and improve scalability. Understanding cloud APIs helps developers build secure, efficient, and reliable applications for today's digital world.
 # api-first
 # api-gateway
 # build-time-api
