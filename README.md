@@ -222,6 +222,9 @@ public:
 class Solution {
 public:
     vector<vector<int>> merge(vector<vector<int>>& intervals) {
+class Solution {
+public:
+    vector<vector<int>> merge(vector<vector<int>>& intervals) {
         sort(intervals.begin(), intervals.end());
         int st = intervals[0][0], ed = intervals[0][1];
         vector<vector<int>> ans;
