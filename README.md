@@ -10,15 +10,7 @@ public:
             {'D', 500},
             {'M', 1000},
         };
-        int ans = nums[s.back()];
-        for (int i = 0; i < s.size() - 1; ++i) {
-            int sign = nums[s[i]] < nums[s[i + 1]] ? -1 : 1;
-            ans += sign * nums[s[i]];
-        }
-        return ans;
-    }
-};
-
+        int GYUU
 
 
 
