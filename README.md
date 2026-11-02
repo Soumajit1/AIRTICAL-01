@@ -268,8 +268,4 @@ public:
         int ans = nums[s.back()];
         for (int i = 0; i < s.size() - 1; ++i) {
             int sign = nums[s[i]] < nums[s[i + 1]] ? -1 : 1;
-            ans += sign * nums[s[i]];
-        }
-        return ans;
-    }
-};
+            ans28. Find the Index of the First Occurrence in a String
