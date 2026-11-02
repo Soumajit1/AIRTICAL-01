@@ -255,23 +255,6 @@ public:
 
 class Solution {
 public:
-    int romanToInt(string s) {
-        unordered_map<char, int> nums{
-            {'I', 1},
-       class Solution {
-public:
-    int strStr(string haystack, string needle) {
-        int n = haystack.size(), m = needle.size();
-        for (int i = 0; i + m <= n; ++i) {
-            if (haystack.substr(i, m) == needle) {
-                return i;
-            }
-        }
-        return -1;
-    }
-};e First Occurrence in a String
-class Solution {
-public:
     int strStr(string haystack, string needle) {
         int n = haystack.size(), m = needle.size();
         for (int i = 0; i + m <= n; ++i) {
