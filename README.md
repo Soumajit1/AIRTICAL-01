@@ -160,12 +160,28 @@ to:
 ﻿
 AGI and the Future of Software Engineering
 AGI could significantly change how software is developed.
-Today, developers spend time writing code, debugging, testing, documenting, researching APIs, and maintaining systems.
-Increasingly capable AI systems can already assist with many of these activities.
-In a future where AI becomes substantially more general, developers may spend more time defining:
-What should be built?
-Why should it be built?
-What constraints exist?
+Today, developers spend time writing code, debugging, testinclass Solution {
+public:
+    vector<int> spiralOrder(vector<vector<int>>& matrix) {
+        int m = matrix.size(), n = matrix[0].size();
+        int dirs[5] = {0, 1, 0, -1, 0};
+        int i = 0, j = 0, k = 0;
+        vector<int> ans;
+        bool vis[m][n];
+        memset(vis, false, sizeof(vis));
+        for (int h = m * n; h; --h) {
+            ans.push_back(matrix[i][j]);
+            vis[i][j] = true;
+            int x = i + dirs[k], y = j + dirs[k + 1];
+            if (x < 0 || x >= m || y < 0 || y >= n || vis[x][y]) {
+                k = (k + 1) % 4;
+            }
+            i += dirs[k];
+            j += dirs[k + 1];
+        }
+        return ans;
+    }
+};
 How should success be measured?
 What risks are unacceptable?
 AI could handle more of the implementation process while humans remain responsible for requirements, architecture, verification, governance, and strategic decisions.
