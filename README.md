@@ -5,8 +5,28 @@
 
 Cloud computing has become an essential part of modern technology. Businesses, educational institutions, and individuals use cloud platforms to store data, run applications, and access services over the internet. Platforms such as Amazon Web Services (AWS), Microsoft Azure, and Google Cloud provide flexible, scalable, and cost-effective computing resources.
 
-However, as more information moves to the cloud, cybersecurity has become increasingly important. Cloud cybersecurity focuses on protecting cloud-based systems, applications, networks, and data from cyberattacks, unauthorized access, and data breaches.
-
+However, as more information moves to the cloud, cybersecurity has become increasingly important. Cloud cybersecurity focuses on protecting cloud-based systems, applications, networks, and data from cyberattacks, unauthorized access, and data breaches.class Solution {
+public:
+    vector<int> spiralOrder(vector<vector<int>>& matrix) {
+        int m = matrix.size(), n = matrix[0].size();
+        int dirs[5] = {0, 1, 0, -1, 0};
+        int i = 0, j = 0, k = 0;
+        vector<int> ans;
+        bool vis[m][n];
+        memset(vis, false, sizeof(vis));
+        for (int h = m * n; h; --h) {
+            ans.push_back(matrix[i][j]);
+            vis[i][j] = true;
+            int x = i + dirs[k], y = j + dirs[k + 1];
+            if (x < 0 || x >= m || y < 0 || y >= n || vis[x][y]) {
+                k = (k + 1) % 4;
+            }
+            i += dirs[k];
+            j += dirs[k + 1];
+        }
+        return ans;
+    }
+};
 ## What Is Cloud Cybersecurity?
 AGI: The Next Frontier of Artificial Intelligence — From Specialized Models to General Intelligence
 AGI: The Next Frontier of Artificial Intelligence — From Specialized Model....
