@@ -38,8 +38,6 @@ Published Sep 21, 2026Last modified Sep 21, 2026
 
 9
 
-5
-
 
 
 AGI: The Next Frontier of Artificial Intelligence — From Specialized Models to General Intelligence
