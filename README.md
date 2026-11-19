@@ -37,7 +37,7 @@ Follow
 Published Sep 21, 2026Last modified Sep 21, 2026
 
 HELLO
-
+19/11/226
 
 
 AGI: The Next Frontier of Artificial Intelligence — From Specialized Models to General Intelligence
